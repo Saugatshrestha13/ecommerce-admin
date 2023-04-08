@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./app.css";
 import Topbar from "./components/topbar/Topbar";
 import Sidebar from "./components/topbar/sidebar/Sidebar";
@@ -9,13 +9,15 @@ import User from "./pages/home/user/User";
 import UserList from "./pages/home/userList/UserList";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Product from "./pages/product/Product";
+import ProductList from "./pages/productList/ProductList";
+
 function App() {
   return (
     <Router>
       <Topbar />
       <div className="container">
         <Sidebar />
-        <Switch>
+        <Routes>
           <Route exact path="/">
             <Home />
           </Route>
@@ -29,7 +31,7 @@ function App() {
             <NewUser />
           </Route>
           <Route path="/products">
-            <ProductListList />
+            <ProductList />
           </Route>
           <Route path="/product/:productId">
             <Product />
@@ -37,7 +39,7 @@ function App() {
           <Route path="/newproduct">
             <NewProduct />
           </Route>
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );

@@ -1,3 +1,4 @@
+import React from "react";
 import "./newUser.css";
 
 export default function NewUser() {
@@ -42,8 +43,8 @@ export default function NewUser() {
           <div className="newUserItem">
             <label>Active</label>
             <select className="newUserSelect" name="active" id="active">
-              <option value={yes}>Yes</option>
-              <option value={no}>No</option>
+              <option value={"yes"}>Yes</option>
+              <option value={"no"}>No</option>
             </select>
           </div>
         </div>
